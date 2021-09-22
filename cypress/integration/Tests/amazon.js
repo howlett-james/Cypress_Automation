@@ -1,4 +1,7 @@
+import LoginPage from '../../Pages/login_page'
+
 describe('Amazon Sign In functionality', () => {
+    
     it('validate Sign In functionality with valid email and password', () => {
         cy.visit("https://amazon.in");
         cy.title().should('eq','Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in');
