@@ -30,7 +30,6 @@ describe('Amazon Sign In functionality', () => {
         cy.get('#continue').click();
         cy.get('#ap_password').type("Yokesh2899");
         cy.get('#signInSubmit').click();
-        cy.wrap({ class: 'a-alert-heading' }).its('class').should('eq', 'a-alert-heading');
         cy.get('#auth-warning-message-box').within(($autherrormessagebox) =>{
             cy.get($autherrormessagebox).children().should('have.text',"Important Message!\n      \n        \n          \n            To better protect your account, please re-enter your password and then enter the characters as they are shown in the image below.\n          \n        \n      \n    ");
         })
