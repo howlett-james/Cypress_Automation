@@ -1,7 +1,4 @@
-import LoginPage from '../../Pages/login_page'
-
-describe('Amazon Sign In functionality', () => {
-    
+describe('Amazon Sign In functionality', () => {    
     it('validate Sign In functionality with valid email and password', () => {
         cy.visit("https://amazon.in");
         cy.title().should('eq','Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in');
@@ -54,8 +51,7 @@ describe('Amazon Sign In functionality', () => {
         cy.get('#continue').click();
         cy.wrap({ class: 'a-alert-heading' }).its('class').should('eq', 'a-alert-heading');
         cy.get('#auth-error-message-box').within(($autherrormessagebox) =>{
-            cy.get($autherrormessagebox).children().should('have.text',"There was a problem\n      \n        \n          \n        \n        \n      \n      \n        \n          \n            We cannot find an account with that email address\n          \n        \n      \n    ");
-            
+            cy.get($autherrormessagebox).children().should('have.text',"There was a problem\n      \n        \n          \n        \n        \n      \n      \n        \n          \n            We cannot find an account with that email address\n          \n        \n      \n    ");            
         })
     });
     it('validate Sign In functionality with invalid mobile number', () => {
@@ -67,7 +63,6 @@ describe('Amazon Sign In functionality', () => {
         cy.wrap({ class: 'a-alert-heading' }).its('class').should('eq', 'a-alert-heading');
         cy.get('#auth-error-message-box').within(($autherrormessagebox) =>{
             cy.get($autherrormessagebox).children().should('have.text',"Incorrect phone number\n      \n        \n          \n        \n        \n      \n      \n        \n          \n            We cannot find an account with that mobile number\n          \n        \n      \n    ");
-            
         })
     });
 });
