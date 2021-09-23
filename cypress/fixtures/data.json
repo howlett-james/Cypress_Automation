@@ -8,5 +8,6 @@
   "invalidmobilenumber":"123456",
   "invalidpassword":"Yokesh@21",
   "warningmsg":"Important Message!",
-  "errormsg":"There was a problem"
+  "errormsg":"There was a problem",
+  "phnumerrmsg":"Incorrect phone number"
 }

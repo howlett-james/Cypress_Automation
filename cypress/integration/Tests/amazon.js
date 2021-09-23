@@ -49,7 +49,6 @@ describe('Amazon Sign In functionality', () => {
         cy.get('#nav-link-accountList-nav-line-1').click();
         cy.get('#ap_email').type("kuttyyokesh1221gmail.com");
         cy.get('#continue').click();
-        cy.wrap({ class: 'a-alert-heading' }).its('class').should('eq', 'a-alert-heading');
         cy.get('#auth-error-message-box').within(($autherrormessagebox) =>{
             cy.get($autherrormessagebox).children().should('have.text',"There was a problem\n      \n        \n          \n        \n        \n      \n      \n        \n          \n            We cannot find an account with that email address\n          \n        \n      \n    ");            
         })
@@ -60,7 +59,6 @@ describe('Amazon Sign In functionality', () => {
         cy.get('#nav-link-accountList-nav-line-1').click();
         cy.get('#ap_email').type("123456");
         cy.get('#continue').click();
-        cy.wrap({ class: 'a-alert-heading' }).its('class').should('eq', 'a-alert-heading');
         cy.get('#auth-error-message-box').within(($autherrormessagebox) =>{
             cy.get($autherrormessagebox).children().should('have.text',"Incorrect phone number\n      \n        \n          \n        \n        \n      \n      \n        \n          \n            We cannot find an account with that mobile number\n          \n        \n      \n    ");
         })

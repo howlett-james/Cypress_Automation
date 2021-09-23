@@ -43,11 +43,11 @@ describe('Amazon login functionality', () => {
         LoginPage.ClickContinueButton;
         LoginPage.VerifyErrorMessage;
     });
-    it.only('validate sign in functionality with invalid mobile number', () => {
+    it('validate sign in functionality with invalid mobile number', () => {
         LoginPage.LaunchURl;
         LoginPage.navigateToSignPage;
         LoginPage.EnterInvalidMobileNumber;
         LoginPage.ClickContinueButton
-        LoginPage.VerifyErrorMessage;
+        LoginPage.VerifyPhoneNumberErrorMessage;
     });
 });

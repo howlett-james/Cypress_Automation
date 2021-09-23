@@ -38,8 +38,10 @@ class LoginPage{
         cy.get(elements.alert).should('have.text',data.warningmsg);
     }
     get VerifyErrorMessage(){
-        cy.get(elements.alert).should('have.text',data.errormsg)
+        cy.get(elements.alert).should('have.text',data.errormsg);
     }
-
+    get VerifyPhoneNumberErrorMessage(){
+        cy.get(elements.alert).should('have.text',data.phnumerrmsg);
+    }
 }
 export default new LoginPage();
