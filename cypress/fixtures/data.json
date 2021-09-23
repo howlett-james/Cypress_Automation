@@ -1,6 +1,10 @@
 {
   "accountName": "Hello, Yokeshwarara",
   "email": "kuttyyokesh1221@gmail.com",
+  "mobilenumber":"8220574137",
   "password": "Yokesh@210899",
-  "title":"Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in"
+  "title":"Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in",
+  "invalidemail":"kuttyyokesh1221",
+  "invalidmobilenumber":"123456",
+  "invalidpassword":"Yokesh@21"
 }

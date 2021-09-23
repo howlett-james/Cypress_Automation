@@ -10,6 +10,18 @@ class LoginPage{
     get EnterEmailID(){
         cy.get(elements.email).type(data.email);
     }
+    get EnterMobileNumber(){
+        cy.get(elements.email).type(data.mobilenumber);
+    }
+    get EnterInvalidEmail(){
+        cy.get(elements.email).type(data.invalidemail);
+    }
+    get EnterInvalidMobileNumber(){
+        cy.get(elements.email).type(data.invalidmobilenumber);
+    }
+    get EnterInvalidPassword(){
+        cy.get(elements.password).type(data.invalidpassword);
+    }
     get ClickContinueButton(){
         cy.get(elements.continuebtn).click();
     }

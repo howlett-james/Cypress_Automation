@@ -4,5 +4,7 @@
     "email":"#ap_email",
     "continuebtn":"#continue",
     "password":"#ap_password",
-    "signinbtn":"#signInSubmit"
+    "signinbtn":"#signInSubmit",
+    "warning":"#auth-warning-message-box",
+    "error":"#auth-error-message-box"
 }
