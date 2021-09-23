@@ -9,7 +9,7 @@ describe('Amazon login functionality', () => {
         LoginPage.ClickSignInButton;
         LoginPage.VerifyAccountProfile;
     });
-    it.only('validate login functionality with valid mobile number & Password', () => {
+    it('validate login functionality with valid mobile number & Password', () => {
         LoginPage.LaunchURl;
         LoginPage.navigateToSignPage;
         LoginPage.EnterMobileNumber;
@@ -25,6 +25,29 @@ describe('Amazon login functionality', () => {
         LoginPage.ClickContinueButton;
         LoginPage.EnterInvalidPassword;
         LoginPage.ClickSignInButton;
+        LoginPage.VerifyWarningMessage;
     });
-
+    it('validate sign in functionality with valid mobile number and invalid password', () => {
+        LoginPage.LaunchURl;
+        LoginPage.navigateToSignPage;
+        LoginPage.EnterMobileNumber;
+        LoginPage.ClickContinueButton;
+        LoginPage.EnterInvalidPassword;
+        LoginPage.ClickSignInButton;
+        LoginPage.VerifyErrorMessage;
+    });
+    it('validate sign in functionality with invalid email', () => {
+        LoginPage.LaunchURl;
+        LoginPage.navigateToSignPage;
+        LoginPage.EnterInvalidEmail;
+        LoginPage.ClickContinueButton;
+        LoginPage.VerifyErrorMessage;
+    });
+    it.only('validate sign in functionality with invalid mobile number', () => {
+        LoginPage.LaunchURl;
+        LoginPage.navigateToSignPage;
+        LoginPage.EnterInvalidMobileNumber;
+        LoginPage.ClickContinueButton
+        LoginPage.VerifyErrorMessage;
+    });
 });

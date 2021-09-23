@@ -34,6 +34,12 @@ class LoginPage{
     get VerifyAccountProfile(){
         cy.get(elements.accountprofile).should('have.text',data.accountName)
     }
+    get VerifyWarningMessage(){
+        cy.get(elements.alert).should('have.text',data.warningmsg);
+    }
+    get VerifyErrorMessage(){
+        cy.get(elements.alert).should('have.text',data.errormsg)
+    }
 
 }
 export default new LoginPage();

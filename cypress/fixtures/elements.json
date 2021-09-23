@@ -5,6 +5,5 @@
     "continuebtn":"#continue",
     "password":"#ap_password",
     "signinbtn":"#signInSubmit",
-    "warning":"#auth-warning-message-box",
-    "error":"#auth-error-message-box"
+    "alert":".a-alert-heading"
 }
