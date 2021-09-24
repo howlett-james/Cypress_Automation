@@ -50,4 +50,7 @@ describe('Amazon login functionality', () => {
         LoginPage.ClickContinueButton
         LoginPage.VerifyPhoneNumberErrorMessage;
     });
+    it.only('Valid Login', () => {
+        LoginPage.ValidLogin;
+    });
 });

@@ -1,6 +1,15 @@
 import elements from '../fixtures/elements.json'
 import data from '../fixtures/data.json'
-class LoginPage{  
+class LoginPage{ 
+    get ValidLogin(){
+        cy.visit(elements.URL);
+        cy.get(elements.accountprofile).click();
+        cy.get(elements.email).type(data.email);
+        cy.get(elements.continuebtn).click();
+        cy.get(elements.password).type(data.password);
+        cy.get(elements.signinbtn).click();
+        cy.get(elements.accountprofile).should('have.text',data.accountName);
+    }    
     get LaunchURl(){
         cy.visit(elements.URL);
     }
