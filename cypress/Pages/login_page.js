@@ -1,55 +1,48 @@
 import elements from '../fixtures/elements.json'
 import data from '../fixtures/data.json'
 class LoginPage{ 
-    get ValidLogin(){
-        cy.visit(elements.URL);
-        cy.get(elements.accountprofile).click();
-        cy.get(elements.email).type(data.email);
-        cy.get(elements.continuebtn).click();
-        cy.get(elements.password).type(data.password);
-        cy.get(elements.signinbtn).click();
-        cy.get(elements.accountprofile).should('have.text',data.accountName);
-    }    
     get LaunchURl(){
         cy.visit(elements.URL);
     }
     get navigateToSignPage(){
         cy.get(elements.accountprofile).click();
     }
-    get EnterEmailID(){
+    get LoginWithValidEmailCredentials(){
         cy.get(elements.email).type(data.email);
-    }
-    get EnterMobileNumber(){
-        cy.get(elements.email).type(data.mobilenumber);
-    }
-    get EnterInvalidEmail(){
-        cy.get(elements.email).type(data.invalidemail);
-    }
-    get EnterInvalidMobileNumber(){
-        cy.get(elements.email).type(data.invalidmobilenumber);
-    }
-    get EnterInvalidPassword(){
-        cy.get(elements.password).type(data.invalidpassword);
-    }
-    get ClickContinueButton(){
         cy.get(elements.continuebtn).click();
-    }
-    get EnterPassword(){
         cy.get(elements.password).type(data.password);
-    }
-    get ClickSignInButton(){
         cy.get(elements.signinbtn).click();
+        cy.get(elements.accountprofile).should('have.text',data.accountName);
     }
-    get VerifyAccountProfile(){
-        cy.get(elements.accountprofile).should('have.text',data.accountName)
+    get LoginWithValidMobileCredentials(){
+        cy.get(elements.email).type(data.mobilenumber);
+        cy.get(elements.continuebtn).click();
+        cy.get(elements.password).type(data.password);
+        cy.get(elements.signinbtn).click();
+        cy.get(elements.accountprofile).should('have.text',data.accountName);
     }
-    get VerifyWarningMessage(){
+    get LoginWithValidEmailAndInvalidPassword(){
+        cy.get(elements.email).type(data.email);
+        cy.get(elements.continuebtn).click();
+        cy.get(elements.password).type(data.invalidpassword);
+        cy.get(elements.signinbtn).click();
         cy.get(elements.alert).should('have.text',data.warningmsg);
     }
-    get VerifyErrorMessage(){
+    get LoginWithValidMobilenumberAndInvalidPassword(){
+        cy.get(elements.email).type(data.mobilenumber);
+        cy.get(elements.continuebtn).click();
+        cy.get(elements.password).type(data.invalidpassword);
+        cy.get(elements.signinbtn).click();
         cy.get(elements.alert).should('have.text',data.errormsg);
     }
-    get VerifyPhoneNumberErrorMessage(){
+    get LoginWithInvalidEmail(){
+        cy.get(elements.email).type(data.invalidemail);
+        cy.get(elements.continuebtn).click();
+        cy.get(elements.alert).should('have.text',data.errormsg);
+    }
+    get LoginWithInvalidMobilenumber(){
+        cy.get(elements.email).type(data.invalidmobilenumber);
+        cy.get(elements.continuebtn).click();
         cy.get(elements.alert).should('have.text',data.phnumerrmsg);
     }
 }
