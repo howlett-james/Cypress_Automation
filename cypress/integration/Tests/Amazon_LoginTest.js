@@ -2,11 +2,11 @@ import LoginPage from '../../Pages/login_page'
 
 describe('Amazon login functionality', () => {    
     beforeEach(()=>{
-        LoginPage.LaunchURl;
-        LoginPage.navigateToSignPage;
+        LoginPage.LaunchURl();
+        LoginPage.navigateToSignPage();
     })
     it('validate login functionality with valid email & Password', () => {
-        LoginPage.LoginWithValidEmailCredentials;
+        LoginPage.LoginWithValidEmailCredentials();
     });
     it('validate login functionality with valid mobile number & Password', () => {
         LoginPage.LoginWithValidMobileCredentials;
