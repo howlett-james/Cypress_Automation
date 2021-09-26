@@ -1,48 +1,31 @@
 import elements from '../fixtures/elements.json'
 import data from '../fixtures/data.json'
-class LoginPage{ 
+class LoginPage{
     LaunchURl(){
         cy.visit(elements.URL);
     }
     navigateToSignPage(){
         cy.get(elements.accountprofile).click();
     }
-    LoginWithValidEmailCredentials(){
-        cy.get(elements.email).type(data.email);
-        cy.get(elements.continuebtn).click();
-        cy.get(elements.password).type(data.password);
-        cy.get(elements.signinbtn).click();
+    validateLogin(){
         cy.get(elements.accountprofile).should('have.text',data.accountName);
     }
-    LoginWithValidMobileCredentials(){
-        cy.get(elements.email).type(data.mobilenumber);
+    enterEmail(email){
+        cy.get(elements.email).type(email);
         cy.get(elements.continuebtn).click();
-        cy.get(elements.password).type(data.password);
-        cy.get(elements.signinbtn).click();
-        cy.get(elements.accountprofile).should('have.text',data.accountName);
     }
-    LoginWithValidEmailAndInvalidPassword(){
-        cy.get(elements.email).type(data.email);
-        cy.get(elements.continuebtn).click();
-        cy.get(elements.password).type(data.invalidpassword);
-        cy.get(elements.signinbtn).click();
+    login(email,password){
+        this.enterEmail(email)
+        cy.get(elements.password).type(password);
+        cy.get(elements.signinbtn).click();   
+    }
+    validateWarning(){
         cy.get(elements.alert).should('have.text',data.warningmsg);
     }
-    LoginWithValidMobilenumberAndInvalidPassword(){
-        cy.get(elements.email).type(data.mobilenumber);
-        cy.get(elements.continuebtn).click();
-        cy.get(elements.password).type(data.invalidpassword);
-        cy.get(elements.signinbtn).click();
+    validateError(){
         cy.get(elements.alert).should('have.text',data.errormsg);
     }
-    LoginWithInvalidEmail(){
-        cy.get(elements.email).type(data.invalidemail);
-        cy.get(elements.continuebtn).click();
-        cy.get(elements.alert).should('have.text',data.errormsg);
-    }
-    LoginWithInvalidMobilenumber(){
-        cy.get(elements.email).type(data.invalidmobilenumber);
-        cy.get(elements.continuebtn).click();
+    validateMobileError(){
         cy.get(elements.alert).should('have.text',data.phnumerrmsg);
     }
 }

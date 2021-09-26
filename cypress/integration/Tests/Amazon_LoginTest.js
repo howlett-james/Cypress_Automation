@@ -1,26 +1,33 @@
 import LoginPage from '../../Pages/login_page'
+import data from '../../fixtures/data.json'
 
 describe('Amazon login functionality', () => {    
     beforeEach(()=>{
         LoginPage.LaunchURl();
         LoginPage.navigateToSignPage();
-    })
+    });
     it('validate login functionality with valid email & Password', () => {
-        LoginPage.LoginWithValidEmailCredentials();
+        LoginPage.login(data.email,data.password);
+        LoginPage.validateLogin();
     });
     it('validate login functionality with valid mobile number & Password', () => {
-        LoginPage.LoginWithValidMobileCredentials();
+        LoginPage.login(data.mobilenumber,data.password);
+        LoginPage.validateLogin();
     });
     it('validate login functionality with valid email & invalid password', () => {
-        LoginPage.LoginWithValidEmailAndInvalidPassword();
+        LoginPage.login(data.email,data.invalidpassword);
+        LoginPage.validateWarning();
     });
     it('validate sign in functionality with valid mobile number and invalid password', () => {
-        LoginPage.LoginWithValidMobilenumberAndInvalidPassword();
+        LoginPage.login(data.mobilenumber,data.invalidpassword);
+        LoginPage.validateError();
     });
     it('validate sign in functionality with invalid email', () => {
-        LoginPage.LoginWithInvalidEmail();
+        LoginPage.enterEmail(data.invalidemail);
+        LoginPage.validateError();
     });
     it('validate sign in functionality with invalid mobile number', () => {
-        LoginPage.LoginWithInvalidMobilenumber();
+        LoginPage.enterEmail(data.invalidmobilenumber);
+        LoginPage.validateMobileError();
     });
 });
