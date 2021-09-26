@@ -9,18 +9,18 @@ describe('Amazon login functionality', () => {
         LoginPage.LoginWithValidEmailCredentials();
     });
     it('validate login functionality with valid mobile number & Password', () => {
-        LoginPage.LoginWithValidMobileCredentials;
+        LoginPage.LoginWithValidMobileCredentials();
     });
     it('validate login functionality with valid email & invalid password', () => {
-        LoginPage.LoginWithValidEmailAndInvalidPassword;
+        LoginPage.LoginWithValidEmailAndInvalidPassword();
     });
     it('validate sign in functionality with valid mobile number and invalid password', () => {
-        LoginPage.LoginWithValidMobilenumberAndInvalidPassword
+        LoginPage.LoginWithValidMobilenumberAndInvalidPassword();
     });
     it('validate sign in functionality with invalid email', () => {
-        LoginPage.LoginWithInvalidEmail;
+        LoginPage.LoginWithInvalidEmail();
     });
     it('validate sign in functionality with invalid mobile number', () => {
-        LoginPage.LoginWithInvalidMobilenumber;
+        LoginPage.LoginWithInvalidMobilenumber();
     });
 });
