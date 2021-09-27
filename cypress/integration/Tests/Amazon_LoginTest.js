@@ -1,7 +1,7 @@
 import LoginPage from '../../Pages/login_page'
 import data from '../../fixtures/data.json'
 
-describe('Amazon login functionality', () => {    
+describe('Amazon login functionality', () => {
     beforeEach(()=>{
         LoginPage.LaunchURl();
         LoginPage.navigateToSignPage();

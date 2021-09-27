@@ -6,5 +6,7 @@
     "password":"#ap_password",
     "signinbtn":"#signInSubmit",
     "alert":".a-alert-heading",
-    "searchbar":"#twotabsearchtextbox"
+    "searchbar":"#twotabsearchtextbox",
+    "productselector":"span.a-size-medium"
+    
 }

@@ -1,9 +1,13 @@
 import elements from '../fixtures/elements.json'
-import data from '../fixtures/data.json'
 
 class HomePage{
-    SearchProduct(){
-        cy.get(elements.searchbar).type(data.productname).type('{enter}');
+    SearchProduct(productname,key){
+        cy.get(elements.searchbar).type(productname).type(key)
+    }
+    SelectProduct(productname){
+        cy.get(elements.productselector).then($productname=>{
+            cy.get($productname).contains(productname).click()
+        })
     }
 }
 export default new HomePage();
