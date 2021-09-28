@@ -1,13 +1,11 @@
 import elements from '../fixtures/elements.json'
 
 class HomePage{
-    SearchProduct(productname,key){
-        cy.get(elements.searchbar).type(productname).type(key)
+    SearchProduct(productname){
+        cy.get(elements.searchbar).type(productname).type('{enter}')
     }
-    SelectProduct(productname){
-        cy.get(elements.productselector).then($productname=>{
-            cy.get($productname).contains(productname).click()
-        })
+    SelectMyProduct(){
+        cy.get(elements.productselector).invoke('removeAttr','target').click();
     }
 }
 export default new HomePage();

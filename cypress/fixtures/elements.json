@@ -7,6 +7,5 @@
     "signinbtn":"#signInSubmit",
     "alert":".a-alert-heading",
     "searchbar":"#twotabsearchtextbox",
-    "productselector":"span.a-size-medium"
-    
+    "productselector":"h2>a[href*='OnePlus-Nord-Charcoal-128GB-Storage']"
 }
