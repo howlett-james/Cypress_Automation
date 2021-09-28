@@ -8,7 +8,7 @@ describe('Amazon Product Search Functionaltiy', () => {
         LoginPage.navigateToSignPage();
         LoginPage.login(data.email,data.password);
     });
-    it('Search a Product', () => {
+    it('Validate Search a Product functionality', () => {
         HomePage.SearchProduct(data.productname);
         HomePage.SelectMyProduct();
     });
