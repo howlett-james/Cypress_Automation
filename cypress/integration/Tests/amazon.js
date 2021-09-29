@@ -64,3 +64,12 @@ describe('Amazon Sign In functionality', () => {
         })
     });
 });
+
+// HomePage.FillAddressForm(data.fullname,data.newmobilenumber,data.pincode,data.flatno,data.area,data.addresstype);
+        /* cy.get(elements.deliveryname).then(($el)=>{
+            if(Cypress.dom.isVisible($el)==true){
+                HomePage.DeliverToThisAddress();
+            }else{
+                HomePage.FillAddressForm(data.fullname,data.newmobilenumber,data.pincode,data.flatno,data.area,data.town,data.state,data.addresstype);
+            }
+        }) */

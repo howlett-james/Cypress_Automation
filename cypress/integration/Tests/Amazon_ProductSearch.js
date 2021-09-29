@@ -8,16 +8,17 @@ describe('Amazon Product Search Functionaltiy', () => {
         LoginPage.LaunchURl();
         LoginPage.navigateToSignPage();
         LoginPage.login(data.email,data.password);
+        LoginPage.validateLogin();
     });
-    it('Validate Search a Product functionality', () => {
+    it('Validate Add to Cart a Product functionality', () => {
         HomePage.SearchProduct(data.productname);
         HomePage.SelectMyProduct();
-        cy.get(elements.deliveryname).then(($el)=>{
-            if(Cypress.dom.isVisible($el)==true){
-                HomePage.DeliverToThisAddress();
-            }else{
-                HomePage.FillAddressForm(data.fullname,data.newmobilenumber,data.pincode,data.flatno,data.area,data.town,data.state,data.addresstype);
-            }
-        })
+        HomePage.AddtoCart();
+        HomePage.ValidateAddToCart();   
+    });
+    it('Validate Buy Now functionaltiy', () => {
+        HomePage.SearchProduct(data.productname);
+        HomePage.SelectMyProduct();
+        HomePage.BuyNow();
     });
 });
