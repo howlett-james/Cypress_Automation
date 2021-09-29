@@ -17,6 +17,8 @@ class HomePage{
         cy.get(elements.town).type(town);
         cy.get(elements.state).select(state);
         cy.get(elements.addresstype).select(addresstype);
+        cy.get(elements.defaultaddress).check();
+        cy.get(elements.addaddress).click();
     }
     DeliverToThisAddress(){
         cy.get(elements.delivertothisaddress).click();
