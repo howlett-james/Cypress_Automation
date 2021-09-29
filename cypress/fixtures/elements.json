@@ -7,5 +7,15 @@
     "signinbtn":"#signInSubmit",
     "alert":".a-alert-heading",
     "searchbar":"#twotabsearchtextbox",
-    "productselector":"h2 > a[href*='OnePlus-Nord-Charcoal-128GB-Storage']"
+    "productselector":"h2 > a[href*='OnePlus-Nord-Charcoal-128GB-Storage']",
+    "buynow":"#buy-now-button",
+    "fullname":"#address-ui-widgets-enterAddressFullName",
+    "mobilenumber":"#address-ui-widgets-enterAddressPhoneNumber",
+    "pincode":"#address-ui-widgets-enterAddressPostalCode",
+    "flatno":"#address-ui-widgets-enterAddressLine1",
+    "area":"#address-ui-widgets-enterAddressLine2",
+    "town":"#address-ui-widgets-enterAddressCity",
+    "state":"##address-ui-widgets-enterAddressStateOrRegion",
+    "addresstype":"#address-ui-widgets-addr-details-address-type-and-business-hours",
+    "delivertothisaddress":"div.ship-to-this-address>.a-button-inner>a"
 }
