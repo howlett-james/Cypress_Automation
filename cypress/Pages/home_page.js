@@ -16,23 +16,11 @@ class HomePage{
     ValidateAddToCart(){
         cy.get(elements.cart,{timeout:10000}).should('have.text',data.cartmsg);        
     }
-    FillAddressForm(name,mobilenumber,pincode,flatno,area,town,state,addresstype){
-        cy.get(elements.fullname).type(name);
-        cy.get(elements.mobilenumber).type(mobilenumber)
-        cy.get(elements.pincode).type(pincode);
-        cy.get(elements.flatno).type(flatno);
-        cy.get(elements.area).type(area);
-        // cy.get(elements.town).type(town);
-        // cy.get(elements.state).should('have.t')
-        // cy.get(elements.addresstype).select(addresstype);
-        cy.get(elements.defaultaddress).check();
-        cy.get(elements.addaddress).click();
-    }
-    DeliverToThisAddress(){
-        cy.get(elements.delivertothisaddress).click();
-    }
     SelectPaymentMethod(){
-        cy.get(elements.cod).click();
+        cy.get(elements.cod).check();
+        cy.get(elements.continue_div).then(()=>{
+            cy.get(elements.continue).click()
+        })
     }
 }
 export default new HomePage();

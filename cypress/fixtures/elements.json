@@ -11,17 +11,7 @@
     "addtocart":"#add-to-cart-button",
     "cart":"#attachDisplayAddBaseAlert>div>h4.a-alert-heading",
     "buynow":"#buy-now-button",
-    "deliveryname":".displayAddressFullName",
-    "fullname":"#address-ui-widgets-enterAddressFullName",
-    "mobilenumber":"#address-ui-widgets-enterAddressPhoneNumber",
-    "pincode":"#address-ui-widgets-enterAddressPostalCode",
-    "flatno":"#address-ui-widgets-enterAddressLine1",
-    "area":"#address-ui-widgets-enterAddressLine2",
-    "town":"#address-ui-widgets-enterAddressCity",
-    "state":"##address-ui-widgets-enterAddressStateOrRegion",
-    "addresstype":"#address-ui-widgets-addr-details-address-type-and-business-hours",
-    "defaultaddress":"#address-ui-widgets-use-as-my-default",
-    "addaddress":"#address-ui-widgets-form-submit-button",
-    "delivertothisaddress":"div.ship-to-this-address>.a-button-inner>a",
-    "cod":"#pp-61DUmd-144"
+    "cod":"[value*='Cash&isExpired=false&paymentMethod=COD']",
+    "continue_div":"div.pmts-sidebar-wrapper:last-child",
+    "continue":"input[type='submit'][name$='SetPaymentPlanSelectContinueEvent']"
 }

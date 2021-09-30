@@ -1,10 +1,9 @@
 import HomePage from '../../Pages/home_page';
 import LoginPage from '../../Pages/login_page'
-import elements from '../../fixtures/elements.json'
 import data from '../../fixtures/data.json'
 
 describe('Amazon Product Search Functionaltiy', () => {
-    before(()=>{
+    beforeEach(()=>{
         LoginPage.LaunchURl();
         LoginPage.navigateToSignPage();
         LoginPage.login(data.email,data.password);
@@ -16,9 +15,10 @@ describe('Amazon Product Search Functionaltiy', () => {
         HomePage.AddtoCart();
         HomePage.ValidateAddToCart();   
     });
-    it('Validate Buy Now functionaltiy', () => {
+    it.skip('Validate Buy Now functionaltiy', () => {
         HomePage.SearchProduct(data.productname);
         HomePage.SelectMyProduct();
         HomePage.BuyNow();
+        HomePage.SelectPaymentMethod();
     });
 });
