@@ -1,12 +1,12 @@
 import LoginPage from '../../Pages/login_page'
 import data from '../../fixtures/data.json'
 
-describe('Amazon login functionality', () => {
+describe('Amazon login functionality', () => {//test suite
     beforeEach(()=>{
         LoginPage.LaunchURl();
         LoginPage.navigateToSignPage();
     });
-    it('validate login functionality with valid email & Password', () => {
+    it.only('validate login functionality with valid email & Password', () => {//test case
         LoginPage.login(data.email,data.password);
         LoginPage.validateLogin();
     });

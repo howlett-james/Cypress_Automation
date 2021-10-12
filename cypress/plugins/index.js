@@ -16,7 +16,9 @@
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
-module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
-}
+import allureWriter from '@shelex/cypress-allure-plugin/writer';
+export default (on, config) => {
+    allureWriter(on, config);
+    return config;
+};
+

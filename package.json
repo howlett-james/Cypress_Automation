@@ -4,12 +4,12 @@
   "description": "Cypress Automation Practise ",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cypress:open": "cypress open"
   },
   "author": "Logan",
   "license": "ISC",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.19.1",
     "cypress": "^8.5.0"
   }
 }

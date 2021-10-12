@@ -4,8 +4,9 @@ class HomePage{
     SearchProduct(productname){
         cy.get(elements.searchbar).type(productname).type('{enter}')
     }
+    
     SelectMyProduct(){
-        cy.get(elements.productselector).invoke('removeAttr','target').click();
+        cy.get(elements.productselector).invoke('removeAttr','target').click(); //functionality changes , feature doesn't change
     }
     AddtoCart(){
         cy.get(elements.addtocart).click();
@@ -19,7 +20,7 @@ class HomePage{
     SelectPaymentMethod(){
         cy.get(elements.cod).check();
         cy.get(elements.continue_div).then(()=>{
-            cy.get(elements.continue).click()
+            cy.get(elements.continue).click();
         })
     }
 }
