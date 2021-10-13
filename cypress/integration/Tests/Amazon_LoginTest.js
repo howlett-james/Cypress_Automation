@@ -1,7 +1,7 @@
 import LoginPage from '../../Pages/login_page'
 import data from '../../fixtures/data.json'
 
-describe('Amazon login functionality', () => {//test suite
+describe.only('Amazon login functionality', () => {//test suite
     beforeEach(()=>{
         LoginPage.LaunchURl();
         LoginPage.navigateToSignPage();

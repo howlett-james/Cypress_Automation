@@ -1,5 +1,122 @@
 {
   "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
   "name" : "timeline",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "validate Sign In functionality with invalid email",
+    "uid" : "7597985cb8402211",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634114194981,
+      "stop" : 1634114212495,
+      "duration" : 17514
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "validate login functionality with valid email & Password",
+    "uid" : "44f7f78a920b7eb4",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634113941312,
+      "stop" : 1634113972200,
+      "duration" : 30888
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "validate sign in functionality with valid email and invalid password",
+    "uid" : "d2381b09dce56cb1",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634114151751,
+      "stop" : 1634114177796,
+      "duration" : 26045
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validate Buy Now functionaltiy",
+    "uid" : "a3c00974691029f2",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "skipped",
+    "time" : {
+      "start" : 1634114056181,
+      "stop" : 1634114056187,
+      "duration" : 6
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "validate Sign In functionality with valid Mobile number and password",
+    "uid" : "bfb07792f9f72832",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634114118882,
+      "stop" : 1634114151442,
+      "duration" : 32560
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "validate Sign In functionality with invalid mobile number",
+    "uid" : "6af2e0a3a2a5754f",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634114212683,
+      "stop" : 1634114231100,
+      "duration" : 18417
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "validate sign in functionality with valid mobile number and invalid password",
+    "uid" : "bdd5b19119c40e81",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634114178037,
+      "stop" : 1634114194797,
+      "duration" : 16760
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "Validate Add to Cart a Product functionality",
+    "uid" : "771c49147a5de65e",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634113997039,
+      "stop" : 1634114055988,
+      "duration" : 58949
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "validate Sign In functionality with valid email and password",
+    "uid" : "4c7098386df9d55c",
+    "parentUid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+    "status" : "passed",
+    "time" : {
+      "start" : 1634114100304,
+      "stop" : 1634114118571,
+      "duration" : 18267
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  } ]
 }

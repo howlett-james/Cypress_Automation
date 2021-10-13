@@ -2,7 +2,7 @@ import HomePage from '../../Pages/home_page';
 import LoginPage from '../../Pages/login_page'
 import data from '../../fixtures/data.json'
 
-describe('Amazon Product Search Functionaltiy', () => {
+describe.skip('Amazon Product Search Functionaltiy', () => {
     beforeEach(()=>{
         LoginPage.LaunchURl();
         LoginPage.navigateToSignPage();
@@ -15,7 +15,7 @@ describe('Amazon Product Search Functionaltiy', () => {
         HomePage.AddtoCart();
         HomePage.ValidateAddToCart();   
     });
-    it.skip('Validate Buy Now functionaltiy', () => {
+    it('Validate Buy Now functionaltiy', () => {
         HomePage.SearchProduct(data.productname);
         HomePage.SelectMyProduct();
         HomePage.BuyNow();

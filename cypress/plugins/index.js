@@ -9,18 +9,15 @@
 // You can read more here:
 // https://on.cypress.io/plugins-guide
 // ***********************************************************
-
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
-
 /**
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
-import allureWriter from "@shelex/cypress-allure-plugin/writer";
-// import allureWriter from '@shelex/cypress-allure-plugin/writer';
-export default (on, config) => {
-    on('file:preprocessor', webpackPreprocessor);
-    allureWriter(on, config);
-    return config;
+const allureWriter = require("@shelex/cypress-allure-plugin/writer");
+
+module.exports = (on, config) => {
+  allureWriter(on, config);
+  return config;
 };

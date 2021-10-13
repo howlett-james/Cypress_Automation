@@ -1,4 +1,37 @@
 {
-  "total" : 0,
-  "items" : [ ]
+  "total" : 3,
+  "items" : [ {
+    "uid" : "8f6313eb6ceea95fa252896576682a55",
+    "name" : "Amazon Sign In functionality",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 6,
+      "unknown" : 0,
+      "total" : 6
+    }
+  }, {
+    "uid" : "d444276db7fe50062015a9b9fc765332",
+    "name" : "Amazon Product Search Functionaltiy",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 1,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 2
+    }
+  }, {
+    "uid" : "1416f363fcbacecb8792cdba4aee1f05",
+    "name" : "Amazon login functionality",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
 }
